@@ -13,10 +13,21 @@ Aplicação web simples para organizar tarefas por projeto, prioridade e vencime
 - Alternar entre tema claro e escuro
 - Salvar tarefas no armazenamento local do navegador
 - Exibir alertas visuais próximos ao vencimento
+- Instalar como aplicativo (PWA) em celulares compatíveis
+- Abrir a interface offline depois do primeiro carregamento
 
 ## Como executar
 
 Abra `index.html` em um navegador. Não é necessário instalar dependências ou executar um processo de build.
+
+## Instalar no celular
+
+O site publicado usa HTTPS e pode ser instalado como PWA:
+
+- **Android:** abra o site no Chrome e escolha **Instalar app** ou **Adicionar à tela inicial** no menu do navegador.
+- **iPhone/iPad:** abra o site no Safari, toque em **Compartilhar** e escolha **Adicionar à Tela de Início**.
+
+Após a primeira abertura com internet, a interface pode abrir offline. As tarefas permanecem salvas localmente em cada dispositivo e não são sincronizadas entre pessoas.
 
 ## Armazenamento
 
