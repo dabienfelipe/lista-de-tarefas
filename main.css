@@ -671,3 +671,213 @@ body.dark-theme .btn::before {
     outline: 2px solid rgba(155, 225, 93, 0.9);
     outline-offset: 3px;
 }
+
+@media (max-width: 600px) {
+    body::before,
+    body::after {
+        display: none;
+    }
+
+    body {
+        min-height: 100svh;
+        gap: 8px;
+        padding: 12px 12px calc(16px + env(safe-area-inset-bottom));
+    }
+
+    .app-shell {
+        width: 100%;
+        border-radius: 18px;
+    }
+
+    .topbar {
+        padding: 14px 15px 8px;
+    }
+
+    .content {
+        padding: 0 14px 16px;
+    }
+
+    h1 {
+        margin-bottom: 6px;
+        font-size: clamp(1.7rem, 8vw, 2rem);
+    }
+
+    #msg {
+        margin-bottom: 14px;
+        font-size: 0.92rem;
+    }
+
+    .task-summary {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 9px;
+        margin-bottom: 10px;
+    }
+
+    .filters {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+    }
+
+    .filter-btn {
+        padding: 0.45rem 0.3rem;
+        font-size: 0.72rem;
+    }
+
+    .task-toolbar {
+        margin-bottom: 8px;
+    }
+
+    .clear-completed {
+        width: 100%;
+        padding: 0.55rem 0.7rem;
+        font-size: 0.86rem;
+    }
+
+    .task-card {
+        padding: 8px;
+        border-radius: 14px;
+    }
+
+    .priority-legend {
+        gap: 8px;
+        margin-bottom: 7px;
+        font-size: 0.65rem;
+    }
+
+    .task-list {
+        gap: 6px;
+    }
+
+    .task-item {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 3px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--borderColor);
+    }
+
+    .task-item:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .task-main {
+        width: 100%;
+        gap: 9px;
+        padding: 8px 9px;
+    }
+
+    .task-item input {
+        flex: 0 0 18px;
+    }
+
+    .task-text {
+        min-width: 0;
+        overflow-wrap: anywhere;
+        font-size: 0.9rem;
+    }
+
+    .task-actions {
+        width: 100%;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        gap: 5px;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .project-badge {
+        display: block;
+        flex: 0 1 auto;
+        min-width: 0;
+        max-width: min(34vw, 120px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-right: auto;
+        font-size: 0.74rem;
+    }
+
+    .due-reminder {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+    }
+
+    .task-priority {
+        min-width: 48px;
+        max-width: 48px;
+    }
+
+    .edit-task,
+    .remove-task {
+        min-width: 34px;
+        min-height: 34px;
+        padding: 0.35rem;
+        font-size: 0.92rem;
+    }
+
+    .task-form {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    .task-form input,
+    .task-form select {
+        min-width: 0;
+        width: 100%;
+        padding: 0.7rem 0.75rem;
+        border-radius: 10px;
+        font-size: 0.88rem;
+    }
+
+    .task-form #task-input,
+    .task-form #task-project {
+        grid-column: 1 / -1;
+    }
+
+    .task-form #task-priority {
+        grid-column: 1;
+        grid-row: 4;
+        min-width: 54px;
+        max-width: 54px;
+        padding-right: 1.1rem;
+    }
+
+    .task-form #task-due-date {
+        grid-column: 1 / -1;
+        grid-row: 3;
+    }
+
+    .task-form button {
+        grid-column: 2;
+        grid-row: 4;
+        padding: 0.7rem 0.8rem;
+        border-radius: 10px;
+        font-size: 0.88rem;
+        white-space: nowrap;
+    }
+
+    .site-footer {
+        padding-top: 4px;
+        font-size: 0.72rem;
+    }
+
+    .modal-overlay {
+        align-items: flex-end;
+        padding: 10px;
+        padding-bottom: max(10px, env(safe-area-inset-bottom));
+    }
+
+    .modal {
+        width: 100%;
+        max-height: calc(100svh - 20px);
+        overflow-y: auto;
+        border-radius: 18px 18px 14px 14px;
+        padding: 18px;
+    }
+}

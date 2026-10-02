@@ -15,6 +15,7 @@ Aplicação web simples para organizar tarefas por projeto, prioridade e vencime
 - Exibir alertas visuais próximos ao vencimento
 - Instalar como aplicativo (PWA) em celulares compatíveis
 - Abrir a interface offline depois do primeiro carregamento
+- Interface responsiva otimizada para celulares e tablets
 
 ## Como executar
 

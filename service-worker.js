@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_NAME = 'lista-de-tarefas-v1';
+const CACHE_NAME = 'lista-de-tarefas-v2';
 const APP_SHELL = [
   './',
   './index.html',
