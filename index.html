@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="light-theme">
+    <div class="app-shell">
+        <header class="topbar">
+            <span class="eyebrow">Produtividade</span>
+            <button class="btn" type="button" aria-label="Alternar tema">Escuro</button>
+        </header>
+
+        <main class="content">
+            <h1>Lista de tarefas</h1>
+            <p id="msg">Tarefas atuais:</p>
+
+            <div class="task-summary">
+                <span id="task-counter">0/3 tarefas concluídas</span>
+                <div class="filters" aria-label="Filtros de tarefas">
+                    <button type="button" class="filter-btn active" data-filter="all">Todas</button>
+                    <button type="button" class="filter-btn" data-filter="active">Ativas</button>
+                    <button type="button" class="filter-btn" data-filter="completed">Concluídas</button>
+                </div>
+            </div>
+
+            <div class="task-toolbar">
+                <button type="button" class="clear-completed" id="clear-completed">Limpar concluídas</button>
+            </div>
+
+            <div class="task-card">
+                <p class="priority-legend" aria-label="Legenda de prioridades">
+                    <span><strong>B</strong> Baixa</span>
+                    <span><strong>M</strong> Média</span>
+                    <span><strong>A</strong> Alta</span>
+                </p>
+                <ul class="task-list" aria-live="polite"></ul>
+            </div>
+
+            <form class="task-form" id="task-form">
+                <input id="task-input" type="text" placeholder="Adicionar nova tarefa" aria-label="Adicionar nova tarefa">
+                <input list="project-suggestions" id="task-project" type="text" placeholder="Projeto" aria-label="Projeto da tarefa">
+                <select id="task-priority" aria-label="Prioridade da tarefa">
+                    <option value="baixa">B</option>
+                    <option value="media" selected>M</option>
+                    <option value="alta">A</option>
+                </select>
+                <input id="task-due-date" type="date" aria-label="Data de vencimento">
+                <button type="submit">Adicionar</button>
+            </form>
+            <datalist id="project-suggestions"></datalist>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <span class="footer-badge">feito por</span>
+        <span class="footer-name">dabienfelipe</span>
+    </footer>
+
+    <div class="modal-overlay" id="edit-modal" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="edit-task-title">
+            <div class="modal-header">
+                <h2 id="edit-task-title">Editar tarefa</h2>
+                <button type="button" class="modal-close" id="close-edit-modal" aria-label="Fechar modal">×</button>
+            </div>
+
+            <form id="edit-task-form" class="edit-task-form">
+                <label>
+                    <span>Tarefa</span>
+                    <input id="edit-task-input" type="text" aria-label="Texto da tarefa">
+                </label>
+
+                <label>
+                    <span>Projeto</span>
+                    <input list="project-suggestions" id="edit-task-project" type="text" aria-label="Projeto da tarefa">
+                </label>
+
+                <label>
+                    <span>Prioridade</span>
+                    <select id="edit-task-priority" aria-label="Prioridade da tarefa editada">
+                        <option value="baixa">B</option>
+                        <option value="media">M</option>
+                        <option value="alta">A</option>
+                    </select>
+                </label>
+
+                <label>
+                    <span>Data de vencimento</span>
+                    <input id="edit-task-due-date" type="date" aria-label="Data de vencimento da tarefa editada">
+                </label>
+
+                <div class="modal-actions">
+                    <button type="button" class="secondary-btn" id="cancel-edit-task">Cancelar</button>
+                    <button type="submit" class="primary-btn">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <noscript>Você precisa habilitar JavaScript para ver o site completo.</noscript>
+</body>
+</html>
