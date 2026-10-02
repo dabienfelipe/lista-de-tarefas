@@ -4,6 +4,17 @@ Aplicação web simples para organizar tarefas por projeto, prioridade e vencime
 
 **Demonstração:** https://thriving-basbousa-b12b5b.netlify.app
 
+> **Status:** protótipo em evolução. A interface é responsiva para celulares e pode ser adicionada à tela inicial como PWA, mas ainda não está publicada na Google Play ou na App Store.
+
+## Atualização mobile
+
+A versão atual foi otimizada para telas de celular e tablet. O site pode ser instalado diretamente pelo navegador para acesso pela tela inicial:
+
+- **Android:** abra a demonstração no Chrome, toque no menu **⋮** e escolha **Instalar app** ou **Adicionar à tela inicial**.
+- **iPhone/iPad:** abra a demonstração no Safari, toque em **Compartilhar** e escolha **Adicionar à Tela de Início**.
+
+É necessário abrir o site com internet pelo menos uma vez. Depois, a interface também pode carregar offline.
+
 ## Funcionalidades
 
 - Criar, editar, concluir e remover tarefas
@@ -21,18 +32,9 @@ Aplicação web simples para organizar tarefas por projeto, prioridade e vencime
 
 Abra `index.html` em um navegador. Não é necessário instalar dependências ou executar um processo de build.
 
-## Instalar no celular
-
-O site publicado usa HTTPS e pode ser instalado como PWA:
-
-- **Android:** abra o site no Chrome e escolha **Instalar app** ou **Adicionar à tela inicial** no menu do navegador.
-- **iPhone/iPad:** abra o site no Safari, toque em **Compartilhar** e escolha **Adicionar à Tela de Início**.
-
-Após a primeira abertura com internet, a interface pode abrir offline. As tarefas permanecem salvas localmente em cada dispositivo e não são sincronizadas entre pessoas.
-
 ## Armazenamento
 
-As tarefas ficam salvas localmente no navegador em que foram criadas. Elas não são sincronizadas entre dispositivos ou usuários.
+As tarefas ficam salvas localmente no navegador em que foram criadas. Elas não são sincronizadas entre dispositivos ou usuários. Este projeto é um protótipo, não um serviço de armazenamento compartilhado.
 
 ## Tecnologias
 
